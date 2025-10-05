@@ -44,12 +44,11 @@
 
     main {
       max-width: 850px;
-      margin: 30px auto 80px auto; /* espaço inferior para a barra */
+      margin: 30px auto;
       padding: 0 15px;
     }
 
-    .thought {
-      display: none;
+    article {
       background-color: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
@@ -57,44 +56,39 @@
       margin-bottom: 25px;
       line-height: 1.7;
       box-shadow: 0 4px 10px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
+      display: none; /* todos escondidos inicialmente */
     }
 
-    .thought.active {
-      display: block;
-    }
-
-    .thought h2 {
+    article h2 {
       margin-top: 0;
       font-size: 1.3em;
       color: #333;
       margin-bottom: 12px;
     }
 
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #fff;
-      border-top: 1px solid #ddd;
-      text-align: center;
-      padding: 10px 0;
-      box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    strong {
+      color: #000;
     }
 
-    footer span {
+    .pagination {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .pagination span {
       display: inline-block;
       margin: 0 5px;
+      padding: 8px 12px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
       cursor: pointer;
-      color: #444;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.2s ease;
+      background-color: #fff;
     }
 
-    footer span:hover, footer span.active {
-      color: #111;
-      text-decoration: underline;
+    .pagination span.active {
+      background-color: #444;
+      color: #fff;
+      border-color: #444;
     }
   </style>
 </head>
@@ -107,103 +101,48 @@
     </nav>
   </header>
 
-  <main>
-    <!-- Pensamento 1 -->
-    <article class="thought active">
-      <h2>1</h2>
-      <p>Hoje, percebi algo curioso: nesta geração, ser comum se tornou raro.<br>
-      O homem comum (aquele que antes seria considerado “medíocre” ou “sem brilho”) passa a ser raro, quase mítico, justamente porque não está tomado pelo excesso. Ele não é viciado em informação, não se perde no espetáculo digital, não tenta ser personagem de si mesmo. Ele só vive — e isso já é quase revolucionário. Ser simples, viver sem buscar aprovação constante, respirar sem se comparar, tornou-se um ato de coragem.</p>
-      <p>A era digital é perfeita, mas quem a consome não é. Excesso de informação, excesso de espetáculo, excesso de personagem — tudo isso virou padrão. E, no meio desse barulho, o homem comum, inocente e desperto apenas para o que realmente importa, passa a ser desejável justamente por ser raro.</p>
-      <p>O que antes era “medíocre” hoje é revolucionário. Ser simples é uma forma de resistência. Ser normal, uma forma de autenticidade.</p>
-    </article>
-
-    <!-- Pensamento 2 -->
-    <article class="thought">
-      <h2>2</h2>
-      <p>As pessoas merecem os governantes que têm — não por erro, mas por <strong>ignorância consciente.</strong><br>
-      A política básica não é aprendida; predomina o espetáculo. O país caminha à deriva, e o povo assiste, entretido, sem perceber a rota que deveria traçar.</p>
-    </article>
-
-    <!-- Pensamento 3 -->
-    <article class="thought">
-      <h2>3</h2>
-      <p>Tudo é dor — e isso é inevitável.<br>
-      Mas podemos <strong>escolher reduzir nosso mundo</strong>, simplificar nossa vida e <strong>amenizar o sofrimento.</strong> Quanto menor o espaço que ocupamos na confusão do mundo, menores as chances de sermos engolidos por ele.</p>
-      <p>Viver simples não é resignação; é sobrevivência consciente. É transformar a inevitável dor em um fardo mais leve, sem se perder no caos que nos cerca.</p>
-    </article>
-
-    <!-- Pensamento 4 -->
-    <article class="thought">
-      <h2>4</h2>
-      <p>Sobre a homofobia<br>
-      Não gosto da homofobia porque, ao longo da vida, aprendi a respeitar e admirar muito os homossexuais. Eles são, acima de tudo, corajosos. Não têm medo de mostrar quem são, e muitas vezes fazem isso de maneira criativa, artística e espontânea.</p>
-      <p>Numa sociedade que insiste em tratá-los como fracos, pecadores ou diferentes, eles respondem com alegria e autenticidade. Para mim, a verdadeira essência está na pessoa que se aceita como é e transforma essa aceitação em força diária.</p>
-    </article>
-
-    <!-- Pensamento 5 -->
-    <article class="thought">
-      <h2>5</h2>
-      <p>As pessoas necessitam de salvadores — heróis da realidade.<br>
-      Mas estes, invariavelmente, tornam-se salvadores broxas. O clímax do homem não está na realização, mas na luta. E quando os “heróis” chegam ao topo, caem pateticamente: destruturados, frágeis, incapazes de cumprir as próprias missões que assumiram.</p>
-      <p>A verdade é que a maioria não tem tempo — nem capacidade — para ser heroica. É nesse terreno fértil que florescem os falsos salvadores: intelectuais, religiosos, coaches e, sobretudo, políticos. Eles se aproveitam da estupidez e da pressa, da incapacidade do povo de lidar com a verdade, para impor opiniões desconectadas da realidade.</p>
-    </article>
-
-    <!-- Pensamento 6 -->
-    <article class="thought">
-      <h2>6</h2>
-      <p>Uma república ideal para o Brasil seria organizada com base em meritocracia seletiva. Pessoas realmente qualificadas seriam colocadas em posições específicas de acordo com suas habilidades, não escolhidas pelo voto popular, mas por aqueles com discernimento para selecionar os mais aptos.<br>
-      Em vez de um líder eleito pelo povo indicar pessoas de sua confiança, o maior especialista em saúde ocuparia o Ministério da Saúde, o militar mais capacitado seria promovido a capitão, e assim sucessivamente, garantindo que cada função fosse preenchida por quem realmente entende dela.</p>
-    </article>
-
-    <!-- Pensamento 7 -->
-    <article class="thought">
-      <h2>7</h2>
-      <p>As festas modernas me parecem vazias. Antigamente, elas tinham um propósito: honrar a vida, a natureza, os deuses, a juventude. Imagino como seria se recuperássemos esse sentido: uma festa inspirada na Grécia Antiga, com comidas e bebidas típicas da época; se fosse aniversário, o ideal seriam guloseimas — mesmo quando adultos —, pois os doces e essa leve “infantilização” nos remetem à juventude e trazem um conforto especial. Nas eras aristocráticas ou renascentistas, as festas tinham um objetivo em si mesmas: celebrar o pôr do sol, a lua, uma deusa, ou simplesmente a vida. Hoje, parecem ter virado apenas desculpas para beber... E o pior: nem criaram uma festa dedicada só às bebidas, que ao menos seria honesta no seu propósito.</p>
-    </article>
-
-    <!-- Pensamento 8 -->
-    <article class="thought">
-      <h2>8</h2>
-      <p>Muitos se envergonham da profissão que exercem e sonham em abandoná-la, em vez de buscar excelência dentro dela.<br>
-      Não importa se é médico, varredor de rua ou prostituta — em cada ofício há espaço para ser o melhor de si mesmo.<br>
-      Mas, ao negar o próprio papel, a pessoa se apequena. Prefere desistir a transformar sua condição em força.<br>
-      Talvez a verdadeira dignidade esteja menos em mudar de trabalho, e mais em afirmar-se no que se é.</p>
-    </article>
-
-    <!-- Pensamento 9 -->
-    <article class="thought">
-      <h2>9</h2>
-      <p>A paixão amorosa é uma ilusão criada pela espécie para enganar o indivíduo e força-lo a servir seus propósitos. Uma vez satisfeito o instinto - ou seja, uma vez consumada a união sexual para fins reprodutivos - a ilusão se desfaz. O gozo masculino por vez consumado, nada lhe resta que a rejeição, o distanciamento da parceira. Homem e Mulher - ferramentas da espécie, o que parecia um sentimento sublime revela-se como simples atração instintiva, e o amante muitas vezes se vê infeliz, decepcionado, até mesmo acorrentado a alguém com quem não tem qualquer afinidade real.</p>
-    </article>
+  <main id="thoughts">
+    <!-- Seus artigos já existentes vão aqui, com números 1 a 10 -->
+    <!-- Exemplo com 10 pensamentos já do seu arquivo -->
+    <article><h2>1</h2><p>Hoje, percebi algo curioso: nesta geração, ser comum se tornou raro... </p></article>
+    <article><h2>2</h2><p>As pessoas merecem os governantes que têm — não por erro, mas por <strong>ignorância consciente.</strong> ... </p></article>
+    <article><h2>3</h2><p>Tudo é dor — e isso é inevitável... </p></article>
+    <article><h2>4</h2><p>Sobre a homofobia... </p></article>
+    <article><h2>5</h2><p>As pessoas necessitam de salvadores — heróis da realidade. Mas estes, invariavelmente, tornam-se salvadores broxas... </p></article>
+    <article><h2>6</h2><p>Uma república ideal para o Brasil seria organizada com base em meritocracia seletiva... </p></article>
+    <article><h2>7</h2><p>As festas modernas me parecem vazias. Antigamente, elas tinham um propósito... </p></article>
+    <article><h2>8</h2><p>Muitos se envergonham da profissão que exercem... </p></article>
+    <article><h2>9</h2><p>A paixão amorosa é uma ilusão criada pela espécie para enganar o indivíduo... </p></article>
+    <article><h2>10</h2><p>A realidade mente com beleza... </p></article>
   </main>
 
-  <footer>
-    <span data-index="0" class="active">1</span>
-    <span data-index="1">2</span>
-    <span data-index="2">3</span>
-    <span data-index="3">4</span>
-    <span data-index="4">5</span>
-    <span data-index="5">6</span>
-    <span data-index="6">7</span>
-    <span data-index="7">8</span>
-    <span data-index="8">9</span>
-  </footer>
+  <div class="pagination" id="pagination"></div>
 
   <script>
-    const thoughts = document.querySelectorAll('.thought');
-    const numbers = document.querySelectorAll('footer span');
+    const articles = document.querySelectorAll('main article');
+    const pagination = document.getElementById('pagination');
+    const perPage = 9;
+    const totalPages = Math.ceil(articles.length / perPage);
 
-    function showThought(index) {
-      thoughts.forEach(t => t.classList.remove('active'));
-      numbers.forEach(n => n.classList.remove('active'));
-      thoughts[index].classList.add('active');
-      numbers[index].classList.add('active');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    function showPage(page) {
+      const start = (page - 1) * perPage;
+      const end = start + perPage;
+      articles.forEach((a, i) => {
+        a.style.display = (i >= start && i < end) ? 'block' : 'none';
+      });
+
+      // Atualizar paginação
+      pagination.innerHTML = '';
+      for (let i = 1; i <= totalPages; i++) {
+        const span = document.createElement('span');
+        span.textContent = i;
+        if (i === page) span.classList.add('active');
+        span.onclick = () => showPage(i);
+        pagination.appendChild(span);
+      }
     }
 
-    numbers.forEach((n, i) => {
-      n.addEventListener('click', () => showThought(i));
-    });
+    showPage(1); // mostra a primeira página ao carregar
   </script>
 </body>
 </html>
