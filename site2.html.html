@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Euforia dos Aliens</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    background-color: #f5f5f5;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #111;
+  }
+ .top-menu {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .top-menu a {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+
+  .top-menu a:hover {
+    background: #222;
+    color: white;
+  }
+
+  .top-menu a.active {
+    background: #222;
+    color: #fff;
+  }
+  main {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 15px;
+  }
+
+  .thought {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  }
+
+  .thought h2 {
+    margin-top: 0;
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  nav.pagination {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  /*-- ALTERAÇÕES FEITAS AQUI --*/
+  nav.pagination button {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 5px; /* Aumentei um pouco o espaçamento */
+    padding: 10px 16px; /* Aumentei o tamanho do botão */
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px; /* Aumentei o tamanho da fonte (números) */
+  }
+
+  nav.pagination button.active {
+    background: #222;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Euforia dos Aliens</h1>
+  <nav class="top-menu">
+    <a href="index.html" class="active">🧠 Pensamentos</a>
+    <a href="seed.html">🌱 Seed</a>
+  </nav>
+</header>
+<main id="thoughts-container">
+  <div class="thought" data-index="1">
+    <h2>1</h2>
+    <p>Hoje, percebi algo curioso: nesta geração, ser comum se tornou raro. O homem comum (aquele que antes seria considerado “medíocre” ou “sem brilho”) passa a ser raro, quase mítico, justamente porque não está tomado pelo excesso. Ele não é viciado em informação, não se perde no espetáculo digital, não tenta ser personagem de si mesmo. Ele só vive — e isso já é quase revolucionário. Ser simples, viver sem buscar aprovação constante, respirar sem se comparar, tornou-se um ato de coragem.</p>
+    <p>A era digital é perfeita, mas quem a consome não é. Excesso de informação, excesso de espetáculo, excesso de personagem — tudo isso virou padrão. E, no meio desse barulho, o homem comum, inocente e desperto apenas para o que realmente importa, passa a ser desejável justamente por ser raro.</p>
+    <p>O que antes era “medíocre” hoje é revolucionário. Ser simples é uma forma de resistência. Ser normal, uma forma de autenticidade.</p>
+  </div>
+
+  <div class="thought" data-index="2">
+    <h2>2</h2>
+    <p>As pessoas merecem os governantes que têm — não por erro, mas por <strong>ignorância consciente.</strong> A política básica não é aprendida; predomina o espetáculo. O país caminha à deriva, e o povo assiste, entretido, sem perceber a rota que deveria traçar.</p>
+  </div>
+
+  <div class="thought" data-index="3">
+    <h2>3</h2>
+  <p style="margin-top:20px;"><strong>Tudo é dor — e isso é inevitável.</strong></p>
+  <p>Mas podemos <strong>escolher reduzir nosso mundo</strong>, simplificar nossa vida e <strong>amenizar o sofrimento.</strong> Quanto menor o espaço que ocupamos na confusão do mundo, menores as chances de sermos engolidos por ele.</p>
+  <p>Viver simples não é resignação; é sobrevivência consciente. É transformar a inevitável dor em um fardo mais leve, sem se perder no caos que nos cerca.</p>
+  </div>
+
+  <div class="thought" data-index="4">
+    <h2>4</h2>
+    <p><strong>Sobre a homofobia</strong></p>
+  <p>Não gosto da homofobia porque, ao longo da vida, aprendi a respeitar e admirar muito os homossexuais. Eles são, acima de tudo, corajosos. Não têm medo de mostrar quem são, e muitas vezes fazem isso de maneira criativa, artística e espontânea.</p>
+  <p>Numa sociedade que insiste em tratá-los como fracos, pecadores ou diferentes, eles respondem com alegria e autenticidade. Para mim, a verdadeira essência está na pessoa que se aceita como é e transforma essa aceitação em força diária.</p>
+  </div>
+
+  <div class="thought" data-index="5">
+    <h2>5</h2>
+    <p>As pessoas necessitam de salvadores — heróis da realidade. Mas estes, invariavelmente, tornam-se <strong>salvadores broxas</strong>. O clímax do homem não está na realização, mas na luta. E quando os “heróis” chegam ao topo, caem pateticamente: destruturados, frágeis, incapazes de cumprir as próprias missões que assumiram.</p>
+    <p>A verdade é que a maioria não tem tempo — nem capacidade — para ser heroica. É nesse terreno fértil que florescem os falsos salvadores: intelectuais, religiosos, coaches e, sobretudo, políticos. Eles se aproveitam da estupidez e da pressa, da incapacidade do povo de lidar com a verdade, para impor opiniões desconectadas da realidade.</p>
+  </div>
+
+  <div class="thought" data-index="6">
+    <h2>6</h2>
+    <p>Uma república ideal para o Brasil seria organizada com base em <strong>meritocracia seletiva</strong>. Pessoas realmente qualificadas seriam colocadas em posições específicas de acordo com suas habilidades, não escolhidas pelo voto popular, mas por aqueles com discernimento para selecionar os mais aptos. Em vez de um líder eleito pelo povo indicar pessoas de sua confiança, o maior especialista em saúde ocuparia o Ministério da Saúde, o militar mais capacitado seria promovido a capitão, e assim sucessivamente, garantindo que cada função fosse preenchida por quem realmente entende dela.</p>
+  </div>
+
+  <div class="thought" data-index="7">
+    <h2>7</h2>
+    <p>As festas modernas me parecem vazias. Antigamente, elas tinham um propósito: honrar a vida, a natureza, os deuses, a juventude. Imagino como seria se recuperássemos esse sentido: uma festa inspirada na Grécia Antiga, com comidas e bebidas típicas da época; se fosse aniversário, o ideal seriam guloseimas — mesmo quando adultos —, pois os doces e essa leve “infantilização” nos remetem à juventude e trazem um conforto especial. Nas eras aristocráticas ou renascentistas, as festas tinham um objetivo em si mesmas: celebrar o pôr do sol, a lua, uma deusa, ou simplesmente a vida. Hoje, parecem ter virado apenas desculpas para beber... E o pior: nem criaram uma festa dedicada só às bebidas, que ao menos seria honesta no seu propósito.</p>
+  </div>
+
+  <div class="thought" data-index="8">
+    <h2>8</h2>
+    <p>Muitos se envergonham da profissão que exercem e sonham em abandoná-la, em vez de buscar excelência dentro dela. Não importa se é médico, varredor de rua ou prostituta — em cada ofício há espaço para ser o melhor de si mesmo. Mas, ao negar o próprio papel, a pessoa se apequena. Prefere desistir a transformar sua condição em força. Talvez a verdadeira dignidade esteja menos em mudar de trabalho, e mais em afirmar-se no que se é.</p>
+  </div>
+
+  <div class="thought" data-index="9">
+    <h2>9</h2>
+    <p>A paixão amorosa é uma ilusão criada pela espécie para enganar o indivíduo e força-lo a servir seus propósitos. Uma vez satisfeito o instinto - ou seja, uma vez consumada a união sexual para fins reprodutivos - a ilusão se desfaz. O gozo masculino por vez consumado, nada lhe resta que a rejeição, o distanciamento da parceira. Homem e Mulher - ferramentas da espécie, o que parecia um sentimento sublime revela-se como simples atração instintiva, e o amante muitas vezes se vê infeliz, decepcionado, até mesmo acorrentado a alguém com quem não tem qualquer afinidade real.</p>
+  </div>
+
+  <div class="thought" data-index="10">
+    <h2>10</h2>
+    <p>A realidade mente com beleza. Tudo o que brilha e parece deslumbrante esconde um perigo, uma dor, algo impossível de suportar de perto. O que chamamos de “belo” é só uma máscara, uma ilusão que nos protege do caos real por trás das coisas. O mar, por exemplo, hipnotiza com sua imensidão, mas devora quem tenta mergulhar fundo demais. A terra encanta, mas essa beleza nasceu de vulcões, desastres e da luta implacável pela sobrevivência. O espaço deslumbra, mas nenhum corpo humano suportaria cinco segundos no vazio absoluto; a mente diante de sua imensidão enlouqueceria. O que julgamos belo é uma ilusão segura, uma aparência que nos mantém fora do insuportável. A beleza, então, é uma mentira necessária — uma aparência que nos mantém fora do insuportável. Assim como uma pintura antiga: de fora, vemos cores e harmonia; habitá-lo seria tormento e desespero.</p>
+  </div>
+
+</main>
+
+<nav class="pagination" id="pagination"></nav>
+
+<script>
+  const thoughts = document.querySelectorAll('.thought');
+  const pagination = document.getElementById('pagination');
+  let currentPage = 1;
+  const thoughtsPerPage = 9;
+
+  function showPage(page) {
+    thoughts.forEach(thought => thought.style.display = 'none');
+    const start = (page - 1) * thoughtsPerPage;
+    const end = start + thoughtsPerPage;
+    for (let i = start; i < end && i < thoughts.length; i++) {
+      thoughts[i].style.display = 'block';
+    }
+    document.querySelectorAll('.pagination button').forEach(btn => btn.classList.remove('active'));
+    document.querySelector(`.pagination button[data-page="${page}"]`).classList.add('active');
+  }
+
+  for (let i = 1; i <= Math.ceil(thoughts.length / thoughtsPerPage); i++) {
+    const btn = document.createElement('button');
+    btn.textContent = i;
+    btn.dataset.page = i;
+    btn.addEventListener('click', () => showPage(i));
+    pagination.appendChild(btn);
+  }
+
+  showPage(1);
+</script>
+
+</body>
+</html>
+
+<a href="seed.html">🌱 Ir para Seed</a>
