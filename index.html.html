@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Euforia dos Aliens</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
   body {
     font-family: Georgia, serif;
@@ -28,7 +29,6 @@
     color: #111;
   }
   
-  /* ESTILO PARA O NOVO LINK DE NAVEGAÇÃO */
   header nav {
     margin-top: 10px;
   }
@@ -66,21 +66,21 @@
     margin-bottom: 12px;
   }
 
-  /* MELHORIA DO ESTILO DA PAGINAÇÃO PARA MOBILE */
   nav.pagination {
     text-align: center;
-    margin: 30px 0; /* Aumenta o espaço vertical */
+    margin: 30px 0;
+    flex-wrap: wrap;
   }
 
   nav.pagination button {
     background: #fff;
     border: 1px solid #ccc;
-    margin: 0 5px; /* Mais espaço entre os botões */
-    padding: 10px 18px; /* Aumenta a área de clique (touch) */
+    margin: 0 5px;
+    padding: 12px 20px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.1em; /* Aumenta a fonte dos números */
+    font-size: 20px; /* tamanho desktop */
     transition: background-color 0.2s, color 0.2s;
   }
 
@@ -92,6 +92,14 @@
     background: #222;
     color: #fff;
     border: 1px solid #222;
+  }
+
+  @media screen and (max-width: 768px) {
+    nav.pagination button {
+      font-size: 28px; /* maior no celular */
+      padding: 14px 24px;
+      margin: 5px;
+    }
   }
 </style>
 </head>
@@ -105,9 +113,10 @@
 </header>
 
 <main id="thoughts-container">
+
   <div class="thought" data-index="1">
     <h2>1</h2>
-    <p>Hoje, percebi algo curioso: nesta geração, ser comum se tornou raro. O homem comum (aquele que antes seria considerado “medíocre” ou “sem brilho”) passa a ser raro, quase mítico, justamente porque não está tomado pelo excesso. Ele não é viciado em informação, não se perde no espetáculo digital, não tenta ser personagem de si mesmo. Ele só vive — e isso já é quase revolucionário. Ser simples, viver sem buscar aprovação constante, respirar sem se comparar, tornou-se um ato de coragem.</p>
+    <p>Hoje, percebi algo curioso: nesta geração, ser comum se tornou raro. O homem comum (aquele que antes seria considerado “medíocre” ou “sem brilho”) passa a ser raro, quase mítico, justamente porque não está tomado pelo excesso. Ele só vive — e isso já é quase revolucionário. Ser simples, viver sem buscar aprovação constante, respirar sem se comparar, tornou-se um ato de coragem.</p>
     <p>A era digital é perfeita, mas quem a consome não é. Excesso de informação, excesso de espetáculo, excesso de personagem — tudo isso virou padrão. E, no meio desse barulho, o homem comum, inocente e desperto apenas para o que realmente importa, passa a ser desejável justamente por ser raro.</p>
     <p>O que antes era “medíocre” hoje é revolucionário. Ser simples é uma forma de resistência. Ser normal, uma forma de autenticidade.</p>
   </div>
@@ -119,16 +128,16 @@
 
   <div class="thought" data-index="3">
     <h2>3</h2>
-  <p style="margin-top:20px;"><strong>Tudo é dor — e isso é inevitável.</strong></p>
-  <p>Mas podemos <strong>escolher reduzir nosso mundo</strong>, simplificar nossa vida e <strong>amenizar o sofrimento.</strong> Quanto menor o espaço que ocupamos na confusão do mundo, menores as chances de sermos engolidos por ele.</p>
-  <p>Viver simples não é resignação; é sobrevivência consciente. É transformar a inevitável dor em um fardo mais leve, sem se perder no caos que nos cerca.</p>
+    <p><strong>Tudo é dor — e isso é inevitável.</strong></p>
+    <p>Mas podemos <strong>escolher reduzir nosso mundo</strong>, simplificar nossa vida e <strong>amenizar o sofrimento.</strong> Quanto menor o espaço que ocupamos na confusão do mundo, menores as chances de sermos engolidos por ele.</p>
+    <p>Viver simples não é resignação; é sobrevivência consciente. É transformar a inevitável dor em um fardo mais leve, sem se perder no caos que nos cerca.</p>
   </div>
 
   <div class="thought" data-index="4">
     <h2>4</h2>
     <p><strong>Sobre a homofobia</strong></p>
-  <p>Não gosto da homofobia porque, ao longo da vida, aprendi a respeitar e admirar muito os homossexuais. Eles são, acima de tudo, corajosos. Não têm medo de mostrar quem são, e muitas vezes fazem isso de maneira criativa, artística e espontânea.</p>
-  <p>Numa sociedade que insiste em tratá-los como fracos, pecadores ou diferentes, eles respondem com alegria e autenticidade. Para mim, a verdadeira essência está na pessoa que se aceita como é e transforma essa aceitação em força diária.</p>
+    <p>Não gosto da homofobia porque, ao longo da vida, aprendi a respeitar e admirar muito os homossexuais. Eles são, acima de tudo, corajosos. Não têm medo de mostrar quem são, e muitas vezes fazem isso de maneira criativa, artística e espontânea.</p>
+    <p>Numa sociedade que insiste em tratá-los como fracos, pecadores ou diferentes, eles respondem com alegria e autenticidade. Para mim, a verdadeira essência está na pessoa que se aceita como é e transforma essa aceitação em força diária.</p>
   </div>
 
   <div class="thought" data-index="5">
@@ -162,14 +171,10 @@
     <p>A realidade mente com beleza. Tudo o que brilha e parece deslumbrante esconde um perigo, uma dor, algo impossível de suportar de perto. O que chamamos de “belo” é só uma máscara, uma ilusão que nos protege do caos real por trás das coisas. O mar, por exemplo, hipnotiza com sua imensidão, mas devora quem tenta mergulhar fundo demais. A terra encanta, mas essa beleza nasceu de vulcões, desastres e da luta implacável pela sobrevivência. O espaço deslumbra, mas nenhum corpo humano suportaria cinco segundos no vazio absoluto; a mente diante de sua imensidão enlouqueceria. O que julgamos belo é uma ilusão segura, uma aparência que nos mantém fora do insuportável. A beleza, então, é uma mentira necessária — uma aparência que nos mantém fora do insuportável. Assim como uma pintura antiga: de fora, vemos cores e harmonia; habitá-lo seria tormento e desespero.</p>
   </div>
 
-<div class="thought" data-index="9">
+  <div class="thought" data-index="11">
     <h2>11</h2>
-    <p>Entre as virtudes que sustentam uma nação, a mais rara é a temperança — o princípio que governa todos os outros.
-Vivem entre nós ricos e pobres, jovens e velhos, fortes e frágeis; e, em nosso Estado, uns parecem dominar enquanto outros obedecem.
-Mas a temperança não escolhe lado: ela habita ambas as partes.
-Se um dia o Estado fosse sua morada, haveria harmonia mesmo entre as diferenças mais profundas, e o conflito se tornaria equilíbrio.</p>
+    <p>Entre as virtudes que sustentam uma nação, a mais rara é a temperança — o princípio que governa todos os outros. Vivem entre nós ricos e pobres, jovens e velhos, fortes e frágeis; e, em nosso Estado, uns parecem dominar enquanto outros obedecem. Mas a temperança não escolhe lado: ela habita ambas as partes. Se um dia o Estado fosse sua morada, haveria harmonia mesmo entre as diferenças mais profundas, e o conflito se tornaria equilíbrio.</p>
   </div>
-
 
 </main>
 
@@ -179,7 +184,7 @@ Se um dia o Estado fosse sua morada, haveria harmonia mesmo entre as diferenças
   const thoughts = document.querySelectorAll('.thought');
   const pagination = document.getElementById('pagination');
   let currentPage = 1;
-  const thoughtsPerPage = 9;
+  const thoughtsPerPage = 5; // melhor visualização em mobile
 
   function showPage(page) {
     thoughts.forEach(thought => thought.style.display = 'none');
@@ -188,17 +193,12 @@ Se um dia o Estado fosse sua morada, haveria harmonia mesmo entre as diferenças
     for (let i = start; i < end && i < thoughts.length; i++) {
       thoughts[i].style.display = 'block';
     }
-    // Remove 'active' de todos e adiciona na página atual
     document.querySelectorAll('.pagination button').forEach(btn => btn.classList.remove('active'));
     const activeBtn = document.querySelector(`.pagination button[data-page="${page}"]`);
-    if (activeBtn) {
-        activeBtn.classList.add('active');
-    }
-    // Rola para o topo da área de conteúdo (para a experiência do usuário)
+    if (activeBtn) activeBtn.classList.add('active');
     document.getElementById('thoughts-container').scrollIntoView({ behavior: 'smooth' });
   }
 
-  // Cria os botões de paginação
   for (let i = 1; i <= Math.ceil(thoughts.length / thoughtsPerPage); i++) {
     const btn = document.createElement('button');
     btn.textContent = i;
