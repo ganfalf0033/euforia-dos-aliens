@@ -27,6 +27,20 @@
     font-size: 2em;
     color: #111;
   }
+  
+  /* ESTILO PARA O NOVO LINK DE NAVEGAÇÃO */
+  header nav {
+    margin-top: 10px;
+  }
+  header nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    padding: 5px 10px;
+  }
+  header nav a:hover {
+    color: #111;
+  }
 
   main {
     max-width: 850px;
@@ -52,26 +66,32 @@
     margin-bottom: 12px;
   }
 
+  /* MELHORIA DO ESTILO DA PAGINAÇÃO PARA MOBILE */
   nav.pagination {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0; /* Aumenta o espaço vertical */
   }
 
-  /*-- ALTERAÇÕES FEITAS AQUI --*/
   nav.pagination button {
     background: #fff;
     border: 1px solid #ccc;
-    margin: 0 5px; /* Aumentei um pouco o espaçamento */
-    padding: 10px 16px; /* Aumentei o tamanho do botão */
+    margin: 0 5px; /* Mais espaço entre os botões */
+    padding: 10px 18px; /* Aumenta a área de clique (touch) */
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 16px; /* Aumentei o tamanho da fonte (números) */
+    font-size: 1.1em; /* Aumenta a fonte dos números */
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  nav.pagination button:hover {
+    background: #e0e0e0;
   }
 
   nav.pagination button.active {
     background: #222;
     color: #fff;
+    border: 1px solid #222;
   }
 </style>
 </head>
@@ -79,6 +99,9 @@
 
 <header>
   <h1>Euforia dos Aliens</h1>
+  <nav>
+    <a href="#top">Voltar ao Início</a>
+  </nav>
 </header>
 
 <main id="thoughts-container">
@@ -139,6 +162,15 @@
     <p>A realidade mente com beleza. Tudo o que brilha e parece deslumbrante esconde um perigo, uma dor, algo impossível de suportar de perto. O que chamamos de “belo” é só uma máscara, uma ilusão que nos protege do caos real por trás das coisas. O mar, por exemplo, hipnotiza com sua imensidão, mas devora quem tenta mergulhar fundo demais. A terra encanta, mas essa beleza nasceu de vulcões, desastres e da luta implacável pela sobrevivência. O espaço deslumbra, mas nenhum corpo humano suportaria cinco segundos no vazio absoluto; a mente diante de sua imensidão enlouqueceria. O que julgamos belo é uma ilusão segura, uma aparência que nos mantém fora do insuportável. A beleza, então, é uma mentira necessária — uma aparência que nos mantém fora do insuportável. Assim como uma pintura antiga: de fora, vemos cores e harmonia; habitá-lo seria tormento e desespero.</p>
   </div>
 
+<div class="thought" data-index="9">
+    <h2>11</h2>
+    <p>Entre as virtudes que sustentam uma nação, a mais rara é a temperança — o princípio que governa todos os outros.
+Vivem entre nós ricos e pobres, jovens e velhos, fortes e frágeis; e, em nosso Estado, uns parecem dominar enquanto outros obedecem.
+Mas a temperança não escolhe lado: ela habita ambas as partes.
+Se um dia o Estado fosse sua morada, haveria harmonia mesmo entre as diferenças mais profundas, e o conflito se tornaria equilíbrio.</p>
+  </div>
+
+
 </main>
 
 <nav class="pagination" id="pagination"></nav>
@@ -156,10 +188,17 @@
     for (let i = start; i < end && i < thoughts.length; i++) {
       thoughts[i].style.display = 'block';
     }
+    // Remove 'active' de todos e adiciona na página atual
     document.querySelectorAll('.pagination button').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.pagination button[data-page="${page}"]`).classList.add('active');
+    const activeBtn = document.querySelector(`.pagination button[data-page="${page}"]`);
+    if (activeBtn) {
+        activeBtn.classList.add('active');
+    }
+    // Rola para o topo da área de conteúdo (para a experiência do usuário)
+    document.getElementById('thoughts-container').scrollIntoView({ behavior: 'smooth' });
   }
 
+  // Cria os botões de paginação
   for (let i = 1; i <= Math.ceil(thoughts.length / thoughtsPerPage); i++) {
     const btn = document.createElement('button');
     btn.textContent = i;
