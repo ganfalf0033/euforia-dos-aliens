@@ -96,14 +96,15 @@ nav.pagination button.active {
 }.poem-title {
   text-align: center;
   font-size: 1.6em;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 25px;
   font-style: italic;
 }
 
 .poem {
-  font-family: "Georgia", serif;
+  font-family: Georgia, serif;
   font-style: italic;
-  font-size: 1.1em;
-  line-height: 1.9;
   text-align: center;
+  font-size: 1.15em;
+  line-height: 1.9;
 }
