@@ -108,3 +108,8 @@ nav.pagination button.active {
   font-size: 1.15em;
   line-height: 1.9;
 }
+.thought p {
+  line-height: 1.7;
+  margin-bottom: 18px;
+  text-align: justify;
+}
