@@ -87,7 +87,51 @@ document.addEventListener('DOMContentLoaded', () => {
     showPage(1);
   }
 
+  // Lógica de proteção por senha nos aforismos
+  function initPasswordProtection() {
+    const protectedThoughts = document.querySelectorAll('.protected-thought');
+
+    protectedThoughts.forEach(thought => {
+      const index = thought.dataset.index;
+      const expectedPassword = thought.dataset.password;
+      const lockContainer = thought.querySelector('.lock-container');
+      const protectedContent = thought.querySelector('.protected-content');
+      const passwordInput = thought.querySelector('.password-input');
+      const unlockBtn = thought.querySelector('.unlock-btn');
+      const errorMsg = thought.querySelector('.error-message');
+
+      const isUnlocked = sessionStorage.getItem(`unlocked_${index}`);
+      if (isUnlocked === 'true') {
+        lockContainer.style.display = 'none';
+        protectedContent.style.display = 'block';
+      }
+
+      function attemptUnlock() {
+        const value = passwordInput.value.trim();
+        if (value === expectedPassword) {
+          sessionStorage.setItem(`unlocked_${index}`, 'true');
+          lockContainer.style.display = 'none';
+          protectedContent.style.display = 'block';
+          errorMsg.style.display = 'none';
+        } else {
+          errorMsg.textContent = 'Senha incorreta. Tente novamente.';
+          errorMsg.style.display = 'block';
+          passwordInput.value = '';
+          passwordInput.focus();
+        }
+      }
+
+      unlockBtn.addEventListener('click', attemptUnlock);
+      passwordInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          attemptUnlock();
+        }
+      });
+    });
+  }
+
   createPaginationButtons();
   handleHash();
+  initPasswordProtection();
   window.addEventListener('hashchange', handleHash);
 });
