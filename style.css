@@ -192,6 +192,73 @@ strong {
   color: var(--texto);
 }
 
+/* Estilos de proteção por senha */
+.lock-container {
+  padding: 20px 10px;
+  text-align: center;
+  background-color: var(--cartao-secundario);
+  border: 1px dashed var(--borda);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.lock-message {
+  color: var(--texto-suave);
+  font-style: italic;
+  margin-bottom: 15px !important;
+  text-align: center !important;
+}
+
+.lock-form {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.password-input {
+  font-family: Georgia, serif;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  outline: none;
+  background: var(--cartao);
+  color: var(--texto);
+  transition: border-color 0.2s;
+}
+
+.password-input:focus {
+  border-color: var(--acento);
+}
+
+.unlock-btn {
+  font-family: Georgia, serif;
+  background: var(--acento);
+  color: #ffffff;
+  border: 1px solid var(--acento);
+  padding: 10px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.unlock-btn:hover {
+  background: var(--texto);
+  border-color: var(--texto);
+  transform: translateY(-1px);
+}
+
+.error-message {
+  color: #c0392b;
+  font-size: 15px;
+  margin-top: 12px !important;
+  text-align: center !important;
+  display: none;
+}
+
 nav.pagination {
   text-align: center;
   margin: 34px 0;
